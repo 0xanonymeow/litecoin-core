@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  litecoin-core:
+    container_name: litecoin-core
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        LOAD_CONFIG_FROM_GIST: true # change this to true when the Savannah server is down or unreadable
+    image: litecoin-core
+    volumes:
+      - ./data:/home/litecoin/.litecoin
