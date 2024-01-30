@@ -7,7 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        LOAD_CONFIG_FROM_GIST: true # change this to true when the Savannah server is down or unreadable
+        LOAD_CONFIG_FROM_GIST: false # change this to true when the Savannah server is down or unreadable
     image: litecoin-core
     volumes:
       - ./data:/home/litecoin/.litecoin
+      - ./litecoin.conf:/home/litecoin/.litecoin/litecoin.conf
