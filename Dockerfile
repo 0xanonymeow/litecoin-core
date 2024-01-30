@@ -35,9 +35,9 @@ RUN useradd -r litecoin && \
 
 RUN set -eux; \
     apt-get install -y gosu; \
-	rm -rf /var/lib/apt/lists/*; \
+    rm -rf /var/lib/apt/lists/*; \
     # verify that the binary works
-	gosu nobody true
+    gosu nobody true
 
 RUN git clone https://github.com/litecoin-project/litecoin.git ${COIN_TMP} && \
     if [ "$LOAD_CONFIG_FROM_GIST" != false ]; then \
