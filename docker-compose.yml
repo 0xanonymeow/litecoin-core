@@ -9,6 +9,8 @@ services:
       args:
         LOAD_CONFIG_FROM_GIST: false # change this to true when the Savannah server is down or unreadable
     image: litecoin-core
+    ports:
+      - 9332:9332
     volumes:
       - ./data:/home/litecoin/.litecoin
       - ./litecoin.conf:/home/litecoin/.litecoin/litecoin.conf
