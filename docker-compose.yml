@@ -11,6 +11,10 @@ services:
     image: litecoin-core
     ports:
       - 9332:9332
+      - 9333:9333
+      - 19332:19332
+      - 19333:19333
+      - 19444:19444
     volumes:
       - ./data:/home/litecoin/.litecoin
       - ./litecoin.conf:/home/litecoin/.litecoin/litecoin.conf
